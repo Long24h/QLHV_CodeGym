@@ -1,5 +1,4 @@
-# QLHV_CodeGym
-# xây dựng trang web quản lý danh bạ học viên fpj
+# xây dựng trang web quản lý học viên CodeGym
 
 ## các kiến thức đã áp dụng
 1. HTML
@@ -13,5 +12,5 @@
 2. fontawesome:  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css
 
 # kết quả
-1. link git: https://github.com/Long24h/Danh_Sach_Hoc_Vien_FPJ.git
-2. link sản phẩm: https://long24h.github.io/Danh_Sach_Hoc_Vien_FPJ/
+1. link git: https://github.com/Long24h/QLHV_CodeGym.git 
+2. link sản phẩm: https://long24h.github.io/QLHV_CodeGym/
