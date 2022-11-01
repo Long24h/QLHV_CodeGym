@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeGymQ:</title>
+    <link rel="icon" href="https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/CodeGym_square/original.png?1595884317">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="case.css">
+    <style>
+        td.ex2:hover,
+        td.ex2:active {
+            font-size: 120%;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgbar" onmouseenter="changeImage(event)" onmouseout="clearAnimation()">
+        <img class="poster"
+            src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/309713453_203917102000511_686870494459962181_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_aid=0&_nc_ohc=LzBAsChd18EAX-uDCOo&_nc_ht=scontent.fhan14-1.fna&oh=00_AfB0wG9g-aMM4zTrYiX91HzWWTq85htrtLs-IDf56Lc7Lg&oe=63643FEE"
+            alt="No IMG">
+        <img class="poster"
+            src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/269920515_1352576311850814_1685775834096044870_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=e3f864&_nc_ohc=EOsZK1eQzMAAX8Q1-yx&_nc_ht=scontent.fhan14-1.fna&oh=00_AfCUvdshYsNXGL1M75dfkPHdfehH0aL4A70yDgQAKyyEnQ&oe=636417AB"
+            alt="No IMG">
+    </div>
+    <table border="1">
+        <tr>
+            <td class="ex2"><a href=""><i class="fa fa-home" style="font-size:24px"></i> HOME PAGE</a></td>
+            <td class="ex2"><a href=""><i class='fas fa-address-book' style='font-size:24px'></i> LIST</a></td>
+            <td class="ex2"><a href=""><i class="fa fa-calendar" style="font-size:24px"></i> SCHEDULE</a></td>
+            <td class="ex2"><a href="https://andy.codegym.vn/center/4/leaderboard"><i class="fa fa-mortar-board"
+                        style="font-size:24px"></i> CHARTS</a></td>
+            <td class="ex2"><a href=""><i class="fa fa-dollar" style="font-size:24px"></i> TUITION</a></td>
+            <td class="ex2"><a href=""><i class='fas fa-archway' style='font-size:24px'></i> VISIT</a></td>
+            <td class="ex2"><a href=""><i class="fa fa-phone" style="font-size:24px"></i> SUPPORT</a></td>
+        </tr>
+    </table>
+    <div class="container">
+        <div class="row">
+            <h4 class="heading-4"><i class='fas fa-users' style='font-size:36px'></i> CODEGYM STUDENT LIST </h4>
+            <br>
+            <button class="btn btn-primary" onclick="openModal()">
+                <i class='fas fa-user-plus' style='font-size:24px'></i>
+                MORE
+            </button>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>NAME
+                            <span class="sort" title="ascending" onclick="ascending('name')">&#9650;</span>
+                            <span class="sort" title="descending" onclick="descending('name')">&#9660;</span>
+                        </th>
+                        <th>AVATAR</th>
+                        <th>PHONE NUMBER</th>
+                        <th>EMAIL</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal-container">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title" style="font-family: Trirong, serif;">MORE</div>
+                <div class="close-modal" onclick="closeModal()">&times;</div>
+            </div>
+            <div class="modal-body">
+                <div class="create-contact">
+                    <div class="contact-info">
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input type="text" class="form-control" id="name">
+                            <input type="hidden" value="0" id="contactId">
+                        </div>
+                        <div class="form-group">
+                            <label for="avatar">AVATAR</label>
+                            <input type="url" class="form-control" id="avatar" onchange="changeAvatar()">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">PHONE NUMBER</label>
+                            <input type="tel" class="form-control" id="mobile">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"></label>
+                            <button id="btnAdd" class="btn btn-warning mr" onclick="addContact()"><i
+                                    class="fa fa-plus"></i> MORE</button>
+                            <button id="btnUpdate" class="btn btn-primary mr d-none" onclick="updateContact()"><i
+                                    class='fas fa-address-card'></i> SAVE</button>
+                            <button class="btn btn-danger" onclick="closeModal()"><i class="fa fa-close"></i>
+                                CANCEL</button>
+                        </div>
+                    </div>
+                    <div class="preview-avatar">
+                        <img class="avatar-lg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjTIP7uCj-UAjFG-Fn9Syx2zRCSmN_aFqzsw&usqp=CAU"
+                            alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row page">
+        <div class="paging-area">
+            <ul id="pagination">
+            </ul>
+    <script src="case.js"></script>
+</body>
